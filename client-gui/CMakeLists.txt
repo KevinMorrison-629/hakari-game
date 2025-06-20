@@ -10,7 +10,7 @@ file(GLOB_RECURSE HEADERS
 )
 
 # Add ImGui and ImNodes external submodules
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external ${CMAKE_BINARY_DIR}/external/imgui)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external)
 
 add_executable(${APPLICATION_NAME}
     ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
@@ -18,9 +18,6 @@ add_executable(${APPLICATION_NAME}
 )
 
 message("${CMAKE_TOOLCHAIN_FILE}")
-
-find_package(glfw3 REQUIRED)
-find_package(glad REQUIRED)
 
 target_link_libraries(${APPLICATION_NAME} PRIVATE
     core

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-set(IMGUI_SUBMODULE "imgui-submodule")
+set(IMGUI_SUBMODULE "imgui")
 project(${IMGUI_SUBMODULE} NONE)
 
 set(IMGUI_SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/imgui)
@@ -31,6 +31,6 @@ target_include_directories(${IMGUI_SUBMODULE} PUBLIC
 
 target_link_libraries(${IMGUI_SUBMODULE} PUBLIC
     glfw
-    OpenGL::GL
+    glad::glad
 )
 

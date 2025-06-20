@@ -16,7 +16,7 @@ add_executable(${APPLICATION_NAME}
 
 target_link_libraries(${APPLICATION_NAME} PRIVATE
     core
-    dpp
+    dpp::dpp
 )
 
 target_include_directories(${APPLICATION_NAME} PRIVATE

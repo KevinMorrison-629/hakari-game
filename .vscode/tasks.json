@@ -7,7 +7,7 @@
             "command": "cmake",
             "args": [
                 "-B",
-                "${workspaceFolder}/build/debug",
+                "${workspaceFolder}/build/Debug",
                 "-DCMAKE_BUILD_TYPE=Debug",
                 "-DCMAKE_TOOLCHAIN_FILE=${CMAKE_TOOLCHAIN_FILE}",
                 "${workspaceFolder}"
@@ -16,56 +16,15 @@
             "group": "build"
         },
         {
-            "label": "Build: Core Library",
+            "label": "Build All",
             "type": "shell",
             "command": "cmake",
             "args": [
                 "--build",
-                "build",
-                "--target",
-                "core"
+                "${workspaceFolder}/build/Debug",
             ],
             "dependsOn": "CMake: Configure",
             "group": "build"
         },
-        {
-            "label": "Build: Server",
-            "type": "shell",
-            "command": "cmake",
-            "args": [
-                "--build",
-                "build",
-                "--target",
-                "server"
-            ],
-            "dependsOn": "CMake: Configure",
-            "group": "build"
-        },
-        {
-            "label": "Build: Client GUI",
-            "type": "shell",
-            "command": "cmake",
-            "args": [
-                "--build",
-                "build",
-                "--target",
-                "client_gui"
-            ],
-            "dependsOn": "CMake: Configure",
-            "group": "build"
-        },
-        {
-            "label": "Build: Client Discord",
-            "type": "shell",
-            "command": "cmake",
-            "args": [
-                "--build",
-                "build",
-                "--target",
-                "client_discord"
-            ],
-            "dependsOn": "CMake: Configure",
-            "group": "build"
-        }
     ]
 }

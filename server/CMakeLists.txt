@@ -16,7 +16,7 @@ add_executable(${APPLICATION_NAME}
 
 target_link_libraries(${APPLICATION_NAME} PRIVATE
     core
-    mongo-cxx-driver
+    $<IF:$<TARGET_EXISTS:mongo::mongocxx_static>,mongo::mongocxx_static,mongo::mongocxx_shared>
 )
 
 target_include_directories(${APPLICATION_NAME} PRIVATE
