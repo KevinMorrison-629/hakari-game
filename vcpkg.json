@@ -1,0 +1,11 @@
+{
+    "name": "hakari",
+    "version": "0.1.0",
+    "dependencies": [
+        "asio",
+        "glad",
+        "glfw3",
+        "mongo-cxx-driver",
+        "dpp"
+    ]
+}
